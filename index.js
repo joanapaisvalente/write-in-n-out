@@ -1,5 +1,13 @@
 const text = document.querySelector(".text");
+const sunButton = document.querySelector(".light-mode");
+const moonButton = document.querySelector(".dark-mode");
+const body = document.querySelector("body");
 
+// EVENT LISTENERS
+sunButton.addEventListener("click", () => changeMode(true));
+moonButton.addEventListener("click", () => changeMode(false));
+
+// TEXT TYPING AND DELETING
 const textArray = [
     "I'm a Developer.", 
     "I love programming.", 
@@ -52,3 +60,18 @@ function deleteText() {
 }
 
 writeText();
+
+// LIGHT AND DARK MODES
+function changeMode(isLightMode) {
+    if (isLightMode) {
+        body.classList.add("light-mode-background");
+        moonButton.classList.remove("display-none");
+        sunButton.classList.add("display-none");
+        text.classList.add("light-mode-text");
+        return;
+    }
+    body.classList.remove("light-mode-background");
+    moonButton.classList.add("display-none");
+    sunButton.classList.remove("display-none");
+    text.classList.remove("light-mode-text");
+}

@@ -3,6 +3,23 @@ body {
     background-color: #333;
     font-family: "Roboto", sans-serif;
     height: 100vh;
+    transition: 0.4s all ease-in;
+}
+
+
+.modes-container {
+    display: flex;
+    justify-content: end;
+    padding: 16px;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.text-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +29,8 @@ body {
     color: #aaa;
     border-right: 4px  solid #841414;
     animation: text-blink 0.75s step-end infinite;
+    transition: 0.4s all ease-in;
+    margin-top: 5rem;
 }
 
 @keyframes text-blink {
@@ -19,8 +38,23 @@ body {
     to {
         border-color: transparent;
     }
-
+    
     50% {
         border-color: #841414;
     }
+}
+
+/* LIGHT / DARK MODE */
+.light-mode-background {
+    background-color: #aaa;
+    transition: 0.4s all ease-in;
+}
+
+.light-mode-text {
+    color: #333;
+    transition: 0.4s all ease-in;
+}
+
+.display-none {
+    display: none;
 }
