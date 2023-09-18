@@ -9,6 +9,7 @@ body {
 }
 
 .text {
+    color: #aaa;
     border-right: 4px  solid #841414;
     animation: text-blink 0.75s step-end infinite;
 }
