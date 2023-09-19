@@ -4,6 +4,7 @@ body {
     font-family: "Roboto", sans-serif;
     height: 100vh;
     transition: 0.4s all ease-in;
+    margin: 0;
 }
 
 
